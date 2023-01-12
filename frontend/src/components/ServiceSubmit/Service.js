@@ -1,8 +1,9 @@
 import axios from "axios"
 
 
-const API_URL = "/api/v1/reservations"
-const URL = "https://lavezares-museum-kzcrybxk3-kyahandoy3zero.vercel.app/"
+const REMOTE_URL = "https://lavezares-museum-kzcrybxk3-kyahandoy3zero.vercel.app"
+const API_URL = `${REMOTE_URL}/api/v1/reservations`
+
 
 const createInquiry = async (personData) => {
     try {
