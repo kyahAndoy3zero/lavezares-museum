@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "Church Museum",
   "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
-    "server": "nodemon backend/server.js"
+    "start": "node backend/server.js"
   },
   "author": "Zandro Gene Ortecio",
   "license": "ISC",
