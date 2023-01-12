@@ -1,0 +1,21 @@
+{
+  "name": "Nuestra Señora de Salvacion Historical and Ecclesiastical Museum",
+  "version": "1.0.0",
+  "description": "Church Museum",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon backend/server.js"
+  },
+  "author": "Zandro Gene Ortecio",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.8.2",
+    "nodemailer": "^6.8.0",
+    "nodemailer-express-handlebars": "^6.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.20"
+  }
+}
