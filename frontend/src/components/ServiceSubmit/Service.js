@@ -1,7 +1,7 @@
 import axios from "axios"
 
 
-const REMOTE_URL = "https://lavezares-museum-kzcrybxk3-kyahandoy3zero.vercel.app"
+const REMOTE_URL = "https://lavezares-museum.vercel.app/"
 const API_URL = `${REMOTE_URL}/api/v1/reservations`
 
 
