@@ -20,7 +20,7 @@ let transporter = nodemailer.createTransport({
 
 let mailOptions = {
     from: '"Nuestra Señora de Salvacion Historical and Ecclesiastical Museum" <lavezareschurchmuseum@gmail.com>',
-    to: 'ortecio.zandrogene30@gmail.com',
+    to: 'annjilldineros@gmail.com',
     subject: 'Reservation Request',
 
 }
