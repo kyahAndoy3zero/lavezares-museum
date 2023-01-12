@@ -65,7 +65,10 @@ const reserveGuest = async (req, res) => {
 }
 
 
-
+const confirmation = async (req, res) => {
+    res.status(200).json({ message: 'hello from vercel' })
+}
 module.exports = {
     reserveGuest,
+    confirmation
 };

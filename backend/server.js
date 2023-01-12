@@ -8,7 +8,5 @@ app.use(express.json());
 app.use(cors())
 
 app.use('/api/v1/reservations', require('./routes/reservationRoutes'))
-app.get('/home', (req, res) => {
-    res.json({ message: 'hi from vercel' })
-})
+
 app.listen(port, () => console.log(`Server started on port ${port}`));
