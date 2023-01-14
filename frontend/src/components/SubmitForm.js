@@ -17,7 +17,7 @@ const SubmitForm = () => {
   const [isAgree, setTerms] = useState(false)
 
   const handleClear = () => {
-    console.log(Object.keys(formData))
+
     const clearedFields = Object.keys(formData).reduce((acc, key) => {
       acc[key] = "";
       return acc;

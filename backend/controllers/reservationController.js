@@ -1,3 +1,4 @@
+const { response } = require('express');
 const nodemailer = require('nodemailer')
 
 
@@ -8,7 +9,7 @@ let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
         user: "lavezareschurchmuseum@gmail.com",
-        pass: "gpmzhzxqoeneyfpi"
+        pass: process.env.PASSWORD
     },
 
     tls: {
@@ -16,34 +17,18 @@ let transporter = nodemailer.createTransport({
     }
 })
 
-
-
+// ginaortecio05@gmail.com
+// ortecio.zandrogene30@gmail.com
 let mailOptions = {
     from: '"Nuestra Señora de Salvacion Historical and Ecclesiastical Museum" <lavezareschurchmuseum@gmail.com>',
-    to: 'annjilldineros@gmail.com',
-    subject: 'Reservation Request',
-
+    to: 'ortecio.zandrogene30@gmail.com',
+    subject: 'Test',
 }
 
-const reponseToUser = (email, firstName) => {
 
-    mailOptions.subject = 'Reservation Received'
-    mailOptions.to = email
-    mailOptions.text = `Hi ${firstName}, thank you for your reservation. We have received your request and will be in touch soon. In the meantime, please wait for our staff to contact you.`
-
-    transporter.sendMail(mailOptions, function (err, success) {
-        if (err) {
-            console.log(err)
-        } else {
-            console.log('Response Sent')
-        }
-    })
-
-}
 
 const reserveGuest = async (req, res) => {
 
-    res.se
     const { firstName, lastName, email, date, time, number } = req.body
 
     if (!firstName || !lastName || !number || !email || !date || !time) return res.send({ status: 'Missing data' });
@@ -58,19 +43,41 @@ const reserveGuest = async (req, res) => {
         if (err) {
             console.log(err)
         } else {
-            reponseToUser(email, firstName);
             console.log('Book Sent')
+
+            // mailOptions.subject = 'Reservation Received'
+            // mailOptions.to = email
+            // mailOptions.text = `Hi ${firstName}, thank you for your reservation. We have received your request and will be in touch soon. In the meantime, please wait for our staff to contact you.`
+
+            // transporter.sendMail(mailOptions, function (err, success) {
+            //     if (err) {
+            //         console.log(err)
+            //     } else {
+            //         console.log('Response Sent')
+            //     }
+            // })
         }
     })
 }
 
+// const responseToUser = (email, firstName) => {
 
-const confirmation = async (req, res) => {
-    res.status(200).json({ message: 'hello from vercel' })
-}
+//     mailOptions.subject = 'Reservation Received'
+//     mailOptions.to = email
+//     mailOptions.text = `Hi ${firstName}, thank you for your reservation. We have received your request and will be in touch soon. In the meantime, please wait for our staff to contact you.`
+
+//     transporter.sendMail(mailOptions, function (err, success) {
+//         if (err) {
+//             console.log(err)
+//         } else {
+//             console.log('Response Sent')
+//         }
+//     })
+
+// }
+
 
 
 module.exports = {
     reserveGuest,
-    confirmation
 };
