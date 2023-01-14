@@ -3,8 +3,8 @@ const router = express.Router();
 
 
 const { reserveGuest } = require('../controllers/reservationController')
-
-router.route('/').post(reserveGuest);
+const { checkSubmitForm } = require('../middlewares/checkSubmitForm')
+router.route('/').post(checkSubmitForm, reserveGuest);
 
 
 module.exports = router;

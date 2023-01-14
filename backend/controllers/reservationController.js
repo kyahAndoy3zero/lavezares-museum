@@ -36,11 +36,6 @@ const responseToUser = (email, firstName) => {
 }
 
 
-
-// ginaortecio05@gmail.com
-// ortecio.zandrogene30@gmail.com
-
-
 let mailOptions = {
     from: '"Nuestra Señora de Salvacion Historical and Ecclesiastical Museum" <lavezareschurchmuseum@gmail.com>',
     to: 'annjilldineros@gmail.com',
@@ -52,8 +47,6 @@ let mailOptions = {
 const reserveGuest = async (req, res) => {
 
     const { firstName, lastName, email, date, time, number } = req.body
-
-    if (!firstName || !lastName || !number || !email || !date || !time) return res.send({ status: 'Missing data' });
 
     const newDate = new Date(date);
     const formattedDate = `${newDate.toLocaleDateString('en-US', options)}`;
