@@ -39,10 +39,12 @@ const responseToUser = (email, firstName) => {
 
 // ginaortecio05@gmail.com
 // ortecio.zandrogene30@gmail.com
+
+
 let mailOptions = {
     from: '"Nuestra Señora de Salvacion Historical and Ecclesiastical Museum" <lavezareschurchmuseum@gmail.com>',
-    to: 'ginaortecio05@gmail.com',
-    subject: 'Test',
+    to: 'annjilldineros@gmail.com',
+    subject: 'Reservation Request',
 }
 
 
