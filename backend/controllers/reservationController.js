@@ -41,7 +41,7 @@ const responseToUser = (email, firstName) => {
 // ortecio.zandrogene30@gmail.com
 let mailOptions = {
     from: '"Nuestra Señora de Salvacion Historical and Ecclesiastical Museum" <lavezareschurchmuseum@gmail.com>',
-    to: 'ortecio.zandrogene30@gmail.com',
+    to: 'ginaortecio05@gmail.com',
     subject: 'Test',
 }
 
