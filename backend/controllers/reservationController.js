@@ -17,6 +17,26 @@ let transporter = nodemailer.createTransport({
     }
 })
 
+
+
+const responseToUser = (email, firstName) => {
+
+    mailOptions.subject = 'Reservation Received'
+    mailOptions.to = email
+    mailOptions.text = `Hi ${firstName}, thank you for your reservation. We have received your request and will be in touch soon. In the meantime, please wait for our staff to contact you.`
+
+    transporter.sendMail(mailOptions, function (err, success) {
+        if (err) {
+            console.log(err)
+        } else {
+            console.log('Response Sent')
+        }
+    })
+
+}
+
+
+
 // ginaortecio05@gmail.com
 // ortecio.zandrogene30@gmail.com
 let mailOptions = {
@@ -44,37 +64,12 @@ const reserveGuest = async (req, res) => {
             console.log(err)
         } else {
             console.log('Book Sent')
+            responseToUser(email, firstName)
 
-            // mailOptions.subject = 'Reservation Received'
-            // mailOptions.to = email
-            // mailOptions.text = `Hi ${firstName}, thank you for your reservation. We have received your request and will be in touch soon. In the meantime, please wait for our staff to contact you.`
-
-            // transporter.sendMail(mailOptions, function (err, success) {
-            //     if (err) {
-            //         console.log(err)
-            //     } else {
-            //         console.log('Response Sent')
-            //     }
-            // })
         }
     })
 }
 
-// const responseToUser = (email, firstName) => {
-
-//     mailOptions.subject = 'Reservation Received'
-//     mailOptions.to = email
-//     mailOptions.text = `Hi ${firstName}, thank you for your reservation. We have received your request and will be in touch soon. In the meantime, please wait for our staff to contact you.`
-
-//     transporter.sendMail(mailOptions, function (err, success) {
-//         if (err) {
-//             console.log(err)
-//         } else {
-//             console.log('Response Sent')
-//         }
-//     })
-
-// }
 
 
 
