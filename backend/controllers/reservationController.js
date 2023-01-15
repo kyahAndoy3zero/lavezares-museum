@@ -55,12 +55,19 @@ const reserveGuest = async (req, res) => {
     mailOptions.text = `${firstName} ${lastName} made a booking appoinment and would like to visit the museum on ${formattedDate} at ${time}. You can contact ${firstName} through email ${email} or you can call this number ${number}.`
 
     transporter.sendMail(mailOptions, function (err, success) {
-        if (err) {
-            console.log(err)
-        } else {
-            console.log('Book Sent')
+        if (success) {
             responseToUser(email, firstName)
+            console.log('Book Sent')
+        } else {
 
+            console.log(err)
+        }
+    })
+
+    res.status(201).json({
+        status: "success",
+        data: {
+            message: "booked"
         }
     })
 }
