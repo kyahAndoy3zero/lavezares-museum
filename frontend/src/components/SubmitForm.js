@@ -68,20 +68,20 @@ const SubmitForm = () => {
         </div>
         <form onSubmit={handleSubmit}>
           <div className="mb-6">
-            <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-400">First Name</label>
+            <label htmlFor="firstName" className="block mb-2 text-sm font-medium text-gray-400">First Name</label>
             <input type="text" id="firstName" name="firstName" value={firstName} onChange={onChange} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Juan" required />
           </div>
           <div className="mb-6">
-            <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-400">Last Name</label>
-            <input type="text" id="lastName" name="lastName" value={lastName} onChange={onChange} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required />
+            <label htmlFor="lastName" className="block mb-2 text-sm font-medium text-gray-400">Last Name</label>
+            <input type="text" id="lastName" name="lastName" value={lastName} onChange={onChange} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Dela Cruz" required />
           </div>
           <div className="mb-6">
-            <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-400">Mobile Number</label>
-            <input type="tel" id="number" name="number" value={number} onChange={onChange} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required />
+            <label htmlFor="tel" className="block mb-2 text-sm font-medium text-gray-400">Mobile Number</label>
+            <input type="tel" id="number" name="number" value={number} onChange={onChange} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="11 Digit Number" required />
           </div>
           <div className="mb-6">
-            <label htmlFor="repeat-password" className="block mb-2 text-sm font-medium text-gray-400">Email</label>
-            <input type="email" id="email" name="email" value={email} onChange={onChange} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required />
+            <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-400">Email</label>
+            <input type="email" id="email" name="email" value={email} onChange={onChange} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="juandelacruz@gmail.com" required />
           </div>
 
           <div className='mb-6'>
