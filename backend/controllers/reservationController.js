@@ -8,7 +8,7 @@ const options = { year: 'numeric', month: 'long', day: 'numeric' };
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: "lavezareschurchmuseum@gmail.com",
+        user: process.env.USER_AUTH,
         pass: process.env.PASSWORD
     },
 
@@ -38,7 +38,7 @@ const responseToUser = (email, firstName) => {
 
 let mailOptions = {
     from: '"Nuestra Señora de Salvacion Historical and Ecclesiastical Museum" <lavezareschurchmuseum@gmail.com>',
-    to: 'annjilldineros@gmail.com',
+    to: process.env.USER_TO,
     subject: 'Reservation Request',
 }
 
